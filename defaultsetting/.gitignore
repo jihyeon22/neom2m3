@@ -1,0 +1,6 @@
+
+# Output files
+etc/fstab
+etc/hostname
+etc/profile.d/timezone.sh
+
