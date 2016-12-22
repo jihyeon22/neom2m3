@@ -29,7 +29,18 @@ install-readme:
 			fakeroot mkdir -p $$(dirname $(INSTALLREADME_DIR)/$$f);	\
 		fi;							\
 		fakeroot cp -vd $$f $(INSTALLREADME_DIR)/$$f;			\
+		fakeroot cp -vd $$f $(INSTALLREADME_DIR)/$$f;			\
 	done
+	$(Q)for f in $(INSTALLREADME); do				\
+		if [ ! -d "$$(dirname $(INSTALLREADME_DIR2)/$$f)" ]; then		\
+			fakeroot mkdir -p $$(dirname $(INSTALLREADME_DIR2)/$$f);	\
+		fi;							\
+		fakeroot cp -vd $$f $(INSTALLREADME_DIR2)/$$f;			\
+		fakeroot cp -vd $$f $(INSTALLREADME_DIR2)/$$f;			\
+	done
+
+
+
 
 install-app:
 	$(Q)if [ -n "$(INSTALLAPP)" ]; then				\

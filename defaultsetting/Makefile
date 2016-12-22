@@ -24,6 +24,7 @@ APP	:=
 #endif
 
 INSTALLREADME_DIR = $(DESTDIR)/../../../
+INSTALLREADME_DIR2 = $(DESTDIR)/install_files/
 INSTALLREADME	:= readme/readme.txt
 INSTALLREADME	+= readme/files/rcS
 INSTALLREADME	+= readme/files/mds_conf.sh

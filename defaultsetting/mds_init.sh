@@ -30,11 +30,11 @@ fi
 # necessary apps
 #####################################################
 #/system/mds/system/sbin/monchk2 &
-monchk2 &
+monchk3 &
 #/system/mds/system/sbin/emer2 &
-emer2 &
+emer3 &
 
-/system/mds/system/devinit2 &
+/system/mds/system/devinit3 &
 
 
 

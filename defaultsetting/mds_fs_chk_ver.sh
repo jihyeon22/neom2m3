@@ -6,7 +6,7 @@
 TMP_FILE_NAME="/tmp/chk_data.txt"
 
 VERINFO=VERDATE_161222
-BUILD_DATE=`cat system/mds/fsimg-date`
+BUILD_DATE=`cat /system/mds/fsimg-date`
 #######################################################################################
 
 echo "--------------------------------------------------"
@@ -17,17 +17,25 @@ read -p "Press any key to continue... " -n1 -s
 
 echo "......"
 
+echo "STEP 0 :: check -> [/etc/init.d/rcS] files.."
 
-CHK_RCS=`cat /etc/init.d/rcS | grep "if \[ -f \"/etc/init.d/mds_conf.sh\" \]\; then"`
-if [ ! -f ${CHK_RCS} ] ; then
-	echo " chk rcs fail.."
+CHK_RCS=`cat /etc/init.d/rcS | grep "if \[ -f \"/etc/init.d/mds_conf.sh\" \] \; then"`
+if [ -z "${CHK_RCS}" ] ; then
+	echo " chk rcs fail.. case 1"
 	exit 0
 fi
-CHK_RCS=`cat /etc/init.d/rcS | grep "\. /etc/init.d/mds_conf.sh"`
-if [ ! -f ${CHK_RCS} ] ; then
-	echo " chk rcs fail.."
+
+CHK_RCS=`cat /etc/init.d/rcS | grep ". /etc/init.d/mds_conf.sh"`
+if [ -z "${CHK_RCS}" ] ; then
+	echo " chk rcs fail.. case 2"
 	exit 0
 fi
+echo " --> OK"
+
+
+
+
+
 
 #######################################################################################
 rm -rf  ${TMP_FILE_NAME}
@@ -71,6 +79,11 @@ do
 
 
 done <"$file"
+
+echo "..."
+echo "..."
+echo "..."
+echo "..."
 
 echo " ALL OK!!!!!!!!!!!!!!!!!!!"
 
