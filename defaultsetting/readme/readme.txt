@@ -38,5 +38,4 @@
 #####################################
  -> /system/mds/fsimg-date-xxxx 의 파일내용을 확인한다.
    + mds-rootfs-xxxx.tar.gz 의 xxxx 날짜 정보와 /system/mds/fsimg-date-xxxx 의 날짜 정보가 일치한다.
- -> 
 
