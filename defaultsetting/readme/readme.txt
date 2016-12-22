@@ -4,7 +4,6 @@
 #####################################
  -> 2016/12/21 이후 릴리즈 건에 대해서... 
   . 기존엔 /data/ 폴더 기준으로 동작하였으나 새로운 파일시스템은 /system/ 기준으로 동작
- -> 실제 정상적인 install 이 되었는지 확인하는 방법
 
 #####################################
   1. /etc/init.d/rcS 변경
@@ -33,4 +32,11 @@
  -> mds-rootfs-xxxx.tar.gz 해당 압축파일을 device 의 /system/ 밑에 압축을 푼다.
    + 압축을 풀면 /system/mds/ 밑에 각종 파일들이 풀린다.
    + mds 프로그램의 init script /system/mds/mds_init.sh
+
+#####################################
+  6. 실제 정상적인 install 이 되었는지 확인하는 방법
+#####################################
+ -> /system/mds/fsimg-date-xxxx 의 파일내용을 확인한다.
+   + mds-rootfs-xxxx.tar.gz 의 xxxx 날짜 정보와 /system/mds/fsimg-date-xxxx 의 날짜 정보가 일치한다.
+ -> 
 

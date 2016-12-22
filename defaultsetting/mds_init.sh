@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# VERDATE_161222
+
 if [ -f "/system/mds/mds_set_env.sh" ] ; then
 	source /system/mds/mds_set_env.sh
 fi
