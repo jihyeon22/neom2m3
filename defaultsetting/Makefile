@@ -34,7 +34,7 @@ INSTALLREADME	+= readme/files/mds_init.sh
 
 INSTALLFILES	:= etc/dropbear/dropbear_rsa_host_key
 #INSTALLFILES	+= system/system.folder
-#INSTALLFILES	+= log/log.folder
+INSTALLFILES	+= log/log.folder
 INSTALLFILES	+= *.sh
 
 include $(SRCROOT)/common/targets.mk
